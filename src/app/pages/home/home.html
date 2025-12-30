@@ -1,0 +1,133 @@
+<app-hero></app-hero>
+
+<section class="section categories-section">
+  <div class="container">
+    <h2 class="section-title">Nos Collections</h2>
+    <p class="section-subtitle">Explorez nos différentes catégories</p>
+    <div class="categories-grid">
+      <a routerLink="/collections/colliers" class="category-card">
+        <div class="category-image">
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=400&fit=crop" alt="Colliers" loading="lazy">
+        </div>
+        <div class="category-content">
+          <h3>Colliers</h3>
+          <span>Découvrir</span>
+        </div>
+      </a>
+      <a routerLink="/collections/bagues" class="category-card">
+        <div class="category-image">
+          <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&h=400&fit=crop" alt="Bagues" loading="lazy">
+        </div>
+        <div class="category-content">
+          <h3>Bagues</h3>
+          <span>Découvrir</span>
+        </div>
+      </a>
+      <a routerLink="/collections/bracelets" class="category-card">
+        <div class="category-image">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=400&fit=crop" alt="Bracelets" loading="lazy">
+        </div>
+        <div class="category-content">
+          <h3>Bracelets</h3>
+          <span>Découvrir</span>
+        </div>
+      </a>
+      <a routerLink="/collections/boucles" class="category-card">
+        <div class="category-image">
+          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=400&fit=crop" alt="Boucles d'oreilles" loading="lazy">
+        </div>
+        <div class="category-content">
+          <h3>Boucles d'oreilles</h3>
+          <span>Découvrir</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<app-products></app-products>
+
+<section class="section about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <span class="about-tag">Notre Histoire</span>
+        <h2>L'Excellence Artisanale depuis 2010</h2>
+        <p>
+          Chez Élégance Boutique, chaque bijou est le fruit d'un savoir-faire
+          transmis de génération en génération. Nos artisans, passionnés par
+          leur métier, créent des pièces uniques qui racontent une histoire.
+        </p>
+        <p>
+          Nous sélectionnons les matériaux les plus nobles et travaillons
+          avec des techniques traditionnelles pour vous offrir des créations
+          d'exception, alliant raffinement et modernité.
+        </p>
+        <a routerLink="/artisans" class="btn btn-primary">Découvrir nos artisans</a>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&h=700&fit=crop" alt="Artisan bijoutier" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section testimonials-section">
+  <div class="container">
+    <h2 class="section-title">Ce que disent nos clients</h2>
+    <p class="section-subtitle">Des témoignages authentiques de notre communauté</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          @for (star of [1,2,3,4,5]; track star) {
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          }
+        </div>
+        <p class="testimonial-text">
+          "Un service exceptionnel et des bijoux d'une qualité remarquable.
+          Mon collier Aurore Dorée fait sensation à chaque fois que je le porte !"
+        </p>
+        <div class="testimonial-author">
+          <strong>Marie L.</strong>
+          <span>Paris</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          @for (star of [1,2,3,4,5]; track star) {
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          }
+        </div>
+        <p class="testimonial-text">
+          "J'ai offert une bague à ma femme pour notre anniversaire.
+          Elle était émerveillée par la finesse du travail. Merci !"
+        </p>
+        <div class="testimonial-author">
+          <strong>Thomas B.</strong>
+          <span>Lyon</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          @for (star of [1,2,3,4,5]; track star) {
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          }
+        </div>
+        <p class="testimonial-text">
+          "Livraison rapide, emballage soigné et bijou conforme à mes attentes.
+          Je recommande vivement cette boutique !"
+        </p>
+        <div class="testimonial-author">
+          <strong>Sophie M.</strong>
+          <span>Bordeaux</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

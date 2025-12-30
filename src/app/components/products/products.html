@@ -1,0 +1,51 @@
+<section class="section products-section">
+  <div class="container">
+    <h2 class="section-title">Nos Créations</h2>
+    <p class="section-subtitle">
+      Des pièces uniques, façonnées avec passion par nos artisans
+    </p>
+
+    <div class="products-filters">
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'all'"
+        (click)="setFilter('all')">
+        Tous
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'colliers'"
+        (click)="setFilter('colliers')">
+        Colliers
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'bagues'"
+        (click)="setFilter('bagues')">
+        Bagues
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'bracelets'"
+        (click)="setFilter('bracelets')">
+        Bracelets
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'boucles'"
+        (click)="setFilter('boucles')">
+        Boucles d'oreilles
+      </button>
+    </div>
+
+    <div class="products-grid">
+      @for (product of filteredProducts; track product.id) {
+        <app-product-card [product]="product"></app-product-card>
+      }
+    </div>
+
+    <div class="products-cta">
+      <a routerLink="/collections" class="btn btn-outline">Voir toute la collection</a>
+    </div>
+  </div>
+</section>

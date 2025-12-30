@@ -1,0 +1,63 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <div class="container">
+    <div class="header-content">
+      <a routerLink="/" class="logo">
+        <span class="logo-text">Élégance</span>
+        <span class="logo-sub">Boutique</span>
+      </a>
+
+      <nav class="nav" [class.active]="menuOpen">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#">Collections</a>
+            <ul class="dropdown">
+              <li><a routerLink="/collections/colliers">Colliers</a></li>
+              <li><a routerLink="/collections/bagues">Bagues</a></li>
+              <li><a routerLink="/collections/bracelets">Bracelets</a></li>
+              <li><a routerLink="/collections/boucles">Boucles d'oreilles</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/nouveautes">Nouveautés</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/artisans">Nos Artisans</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-btn" aria-label="Rechercher">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+        </button>
+        <button class="action-btn wishlist-btn" aria-label="Favoris">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+          </svg>
+        </button>
+        <button class="action-btn cart-btn" aria-label="Panier">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          <span class="cart-count">{{ cartCount }}</span>
+        </button>
+        <button class="menu-toggle" [class.active]="menuOpen" (click)="toggleMenu()" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
